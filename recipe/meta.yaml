@@ -33,7 +33,7 @@ requirements:
     - onnx {{ onnx }}
     - {{ pin_compatible('numpy') }}
     - six {{ six }}
-    - typing-extensions {{ typing_extensions }}
+    - typing-extensions {{ typing_extensions }}  # [py<38]
     - requests {{ requests }}
     - python-flatbuffers 1.12
     - tensorflow-base {{ tensorflow }}
