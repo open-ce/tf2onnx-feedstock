@@ -20,6 +20,9 @@ requirements:
     - python {{ python }}                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy {{ numpy }}                      # [build_platform != target_platform]
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
   host:
     - python {{ python }}
     - pip {{ pip }}
@@ -28,6 +31,9 @@ requirements:
     - onnx {{ onnx }}
     - requests {{ requests }}
     - six {{ six }}
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
   run:
     - python {{ python }}
     - onnx {{ onnx }}
