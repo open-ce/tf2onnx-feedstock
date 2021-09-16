@@ -20,12 +20,12 @@ requirements:
     - python {{ python }}                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy {{ numpy }}                      # [build_platform != target_platform]
+    - onnx {{ onnx }}
   host:
     - python {{ python }}
     - pip {{ pip }}
     - pytest-runner
     - numpy {{ numpy }}
-    - onnx {{ onnx }}
     - requests {{ requests }}
     - six {{ six }}
   run:
