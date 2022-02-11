@@ -10,7 +10,7 @@ source:
   sha256: 20244986a2a45b02e66e4e0dd47e24d672e1eb1dce5712447e2456dadb2cc996
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -35,7 +35,7 @@ requirements:
     - six {{ six }}
     - typing-extensions {{ typing_extensions }}  # [py<38]
     - requests {{ requests }}
-    - python-flatbuffers 1.12
+    - python-flatbuffers {{ flatbuffers }}
     - tensorflow-base {{ tensorflow }}
 
 test:
