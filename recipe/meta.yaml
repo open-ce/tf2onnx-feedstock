@@ -9,7 +9,7 @@ source:
   git_url: https://github.com/onnx/tensorflow-onnx/
   git_rev: v{{ version }}
   patches:
-    - 0001-Updated-flatbuffers-to-be-1.12.patch
+    - 0301-Updated-flatbuffers-to-be-1.12.patch
 
 build:
   number: 3
