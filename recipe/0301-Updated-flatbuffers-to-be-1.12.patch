@@ -1,0 +1,25 @@
+From 9cb41b574a02bc86e5f85ca71291c63c299f7b4d Mon Sep 17 00:00:00 2001
+From: Nishidha Panpaliya <npanpa23@in.ibm.com>
+Date: Tue, 15 Feb 2022 12:29:30 +0000
+Subject: [PATCH] Updated flatbuffers to be >=1.12
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 27b6382..affec00 100644
+--- a/setup.py
++++ b/setup.py
+@@ -81,7 +81,7 @@ setup(
+     author='onnx@microsoft.com',
+     author_email='onnx@microsoft.com',
+     url='https://github.com/onnx/tensorflow-onnx',
+-    install_requires=['numpy>=1.14.1', 'onnx>=1.4.1', 'requests', 'six', 'flatbuffers~=1.12'],
++    install_requires=['numpy>=1.14.1', 'onnx>=1.4.1', 'requests', 'six', 'flatbuffers>=1.12'],
+     classifiers=[
+         'Development Status :: 5 - Production/Stable',
+         'Intended Audience :: Developers',
+-- 
+2.32.0
+
