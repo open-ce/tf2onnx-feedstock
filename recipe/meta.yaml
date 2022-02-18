@@ -12,13 +12,13 @@ source:
     - 0301-Updated-flatbuffers-to-be-1.12.patch
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}         # [ppc_arch != "p10"]
+    - {{ compiler('c') }}           # [ppc_arch != "p10"]
     - python {{ python }}                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy {{ numpy }}                      # [build_platform != target_platform]
