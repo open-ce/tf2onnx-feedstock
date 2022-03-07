@@ -6,17 +6,19 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/onnx/tensorflow-onnx/archive/v{{ version }}.tar.gz
-  sha256: 20244986a2a45b02e66e4e0dd47e24d672e1eb1dce5712447e2456dadb2cc996
+  git_url: https://github.com/onnx/tensorflow-onnx/
+  git_rev: v{{ version }}
+  patches:
+    - 0301-Updated-flatbuffers-to-be-1.12.patch
 
 build:
-  number: 1
+  number: 4
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}         # [ppc_arch != "p10"]
+    - {{ compiler('c') }}           # [ppc_arch != "p10"]
     - python {{ python }}                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy {{ numpy }}                      # [build_platform != target_platform]
@@ -35,7 +37,7 @@ requirements:
     - six {{ six }}
     - typing-extensions {{ typing_extensions }}  # [py<38]
     - requests {{ requests }}
-    - python-flatbuffers 1.12
+    - python-flatbuffers {{ flatbuffers }}
     - tensorflow-base {{ tensorflow }}
 
 test:
