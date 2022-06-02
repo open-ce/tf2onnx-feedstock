@@ -17,8 +17,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}         # [ppc_arch != "p10"]
-    - {{ compiler('c') }}           # [ppc_arch != "p10"]
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
     - python {{ python }}                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy {{ numpy }}                      # [build_platform != target_platform]
