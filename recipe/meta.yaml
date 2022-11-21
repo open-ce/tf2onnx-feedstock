@@ -1,5 +1,5 @@
 {% set name = "tf2onnx" %}
-{% set version = "1.12.1" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,8 +8,6 @@ package:
 source:
   git_url: https://github.com/onnx/tensorflow-onnx/
   git_rev: v{{ version }}
-  patches:
-    - 0301-Updated-flatbuffers-to-be-1.12.patch
 
 build:
   number: 1
