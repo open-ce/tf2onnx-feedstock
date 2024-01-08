@@ -1,5 +1,5 @@
 {% set name = "tf2onnx" %}
-{% set version = "1.15.0" %}
+{% set version = "1.15.1" %}
 
 package:
   name: {{ name|lower }}
@@ -31,6 +31,7 @@ requirements:
   run:
     - python {{ python }}
     - onnx {{ onnx }}
+    - ml_dtypes {{ ml_dtypes }}
     - {{ pin_compatible('numpy') }}
     - six {{ six }}
     - typing-extensions {{ typing_extensions }}  # [py<38]
