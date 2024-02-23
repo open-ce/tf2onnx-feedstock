@@ -1,0 +1,25 @@
+From 2fa296316b9195bdfcbca6710483c6d90b282248 Mon Sep 17 00:00:00 2001
+From: ArchanaShinde1 <archana.shinde2504@gmail.com>
+Date: Fri, 23 Feb 2024 06:28:13 +0000
+Subject: [PATCH] fix pip check
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 847ec4f..570149b 100644
+--- a/setup.py
++++ b/setup.py
+@@ -82,7 +82,7 @@ setup(
+     author='ONNX',
+     author_email='onnx-technical-discuss@lists.lfaidata.foundation',
+     url='https://github.com/onnx/tensorflow-onnx',
+-    install_requires=['numpy>=1.14.1', 'onnx>=1.4.1', 'requests', 'six', 'flatbuffers>=1.12', 'protobuf~=3.20.2'],
++    install_requires=['numpy>=1.14.1', 'onnx>=1.4.1', 'requests', 'six', 'flatbuffers>=1.12', 'protobuf~=4.21.12'],
+     classifiers=[
+         'Development Status :: 5 - Production/Stable',
+         'Intended Audience :: Developers',
+-- 
+2.40.1
+

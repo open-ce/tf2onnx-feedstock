@@ -8,6 +8,8 @@ package:
 source:
   git_url: https://github.com/onnx/tensorflow-onnx/
   git_rev: v{{ version }}
+  patches:
+    - 0001-fix-pip-check.patch
 
 build:
   number: 1
