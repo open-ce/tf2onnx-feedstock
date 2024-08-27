@@ -33,7 +33,7 @@ requirements:
   run:
     - python {{ python }}
     - onnx {{ onnx }}
-    - ml_dtypes {{ ml_dtypes }}
+#    - ml_dtypes {{ ml_dtypes }}
     - {{ pin_compatible('numpy') }}
     - six {{ six }}
     - typing-extensions {{ typing_extensions }}  # [py<38]
