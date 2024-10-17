@@ -44,6 +44,8 @@ requirements:
 test:
   commands:
     - python -m tf2onnx.convert --help
+  requires:
+    - ml_dtypes {{ ml_dtypes }}
 
 about:
   home: https://github.com/onnx/tensorflow-onnx
