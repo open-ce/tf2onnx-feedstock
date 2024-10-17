@@ -12,7 +12,7 @@ source:
     - 0001-fix-pip-check.patch
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -44,6 +44,8 @@ requirements:
 test:
   commands:
     - python -m tf2onnx.convert --help
+  requires:
+    - ml_dtypes {{ ml_dtypes }}
 
 about:
   home: https://github.com/onnx/tensorflow-onnx
